@@ -24,7 +24,7 @@ resource "aws_internet_gateway" "eks_igw" {
 resource "aws_subnet" "eks_pub_sub_one" {
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.0.1.0/24"
-  availability_zone       = "eu-west-2a"
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
 
   tags = {
@@ -37,7 +37,7 @@ resource "aws_subnet" "eks_pub_sub_one" {
 resource "aws_subnet" "eks_pub_sub_two" {
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.0.2.0/24"
-  availability_zone       = "eu-west-2b"
+  availability_zone       = "us-east-1b"
   map_public_ip_on_launch = true
 
   tags = {
@@ -49,7 +49,7 @@ resource "aws_subnet" "eks_pub_sub_two" {
 resource "aws_subnet" "eks_priv_sub_one" {
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = "10.0.3.0/24"
-  availability_zone = "eu-west-2a"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "Private Subnet one"
@@ -60,7 +60,7 @@ resource "aws_subnet" "eks_priv_sub_one" {
 resource "aws_subnet" "eks_priv_sub_two" {
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = "10.0.4.0/24"
-  availability_zone = "eu-west-2b"
+  availability_zone = "us-east-21"
 
   tags = {
     Name = "Private Subnet two"
@@ -192,7 +192,7 @@ resource "aws_eks_cluster" "nottie_cluster" {
 
 # Export the kubeconfig for the EKS cluster
 # output "kubeconfig" {
-#  value = aws_eks_cluster.karo_cluster.kubeconfig
+#  value = aws_eks_cluster.nottie_cluster.kubeconfig
 #}
 
 
