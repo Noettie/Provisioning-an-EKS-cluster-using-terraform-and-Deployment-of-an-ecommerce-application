@@ -60,7 +60,7 @@ resource "aws_subnet" "eks_priv_sub_one" {
 resource "aws_subnet" "eks_priv_sub_two" {
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = "10.0.4.0/24"
-  availability_zone = "us-east-21"
+  availability_zone = "us-east-1b"
 
   tags = {
     Name = "Private Subnet two"
