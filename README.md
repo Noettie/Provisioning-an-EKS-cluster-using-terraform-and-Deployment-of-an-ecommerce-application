@@ -41,15 +41,14 @@
 
 > $ terraform apply
 
-
-_The cluster will take approximately 10-15 minutes to provision.
+_The cluster should take approximately 10-15 minutes to provision.
 3. Update the kube config file with your region and cluster name as in the terraform file. This will enable you to connect to the cluster.
 $ aws eks update-kubeconfig --region <eu-west-2> --name <eks_cluster>
-4. Confirm the nodes were created.
+4. Confirm the configuration was successsful. 
 $ kubectl get nodes
-5. Deploy the application onto the cluster
+5. Deploy the application onto the cluster.
 $ kubectl apply -f deployment.yml
-6. Access the application locally using the load balancer url
+6. Access the application on a browser using the load balancer url.
 $ kubctl get svc
    
 
