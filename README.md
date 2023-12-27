@@ -61,34 +61,34 @@ The application should be live:
 
 7. Delete the application:
 $ kubectl delete -f deployment.yml
-8. Destroy the cluster
+8. Destroy the cluster.
 $ terraform destroy --auto-approve 
 
 ### Part 2: Automating the deployment using
 
 10. Install Jenkins on a remote server.
-11. Navigate to Manage Jenkins > manage credentials > System > Global credentails > Add credentials
-* Add secret textt credential and add ypur aws secret_access_key and access_key
+11. Navigate to Manage Jenkins > manage credentials > System > Global credentails > Add credentials.
+* Add secret textt credential and add ypur aws secret_access_key and access_key.
 * Jenkins will use these credentials to authemtical with your aws account.
 * Use the name of the key on Jenkins on the Jenkinksfile  environment section for proper authentication. 
 12. Edit the following on the Jenkinsfile:
 * Change the url on the checkout stage to your own repository url
-13. Navigate to the configuration section of the Jenkins dashboard and select " This project is parameterized"
+13. Navigate to the configuration section of the Jenkins dashboard and select " This project is parameterized".
   * Add a 'Choice' Parameter.
   * The name of the parameter should be the same name as the one given in the Jenkinsfile ' action'.
   * Add two choices " apply, destroy"
 14. Navigate to Pipeline script from SCM and add your github url
-15. Script path type Jenkinsfile
+15. The script path type will be Jenkinsfile
 16. Click build now and select the choice ' Apply'
     This will provision the eks cluster on aws
   The "Action" stage on the Jenkinsfile provides the option to apply or destroy the cluster.
 
 ### Summary
-* Provisioned an eks cluster using terraform
+* Provisioned an eks cluster using terraform.
 * Deployed an ecommerce application manualy.
 * Automated the provisioning of  an eks cluster and application deployment using terraform. 
 
-### Congratulations! You have successfully provisioned an eks cluster and deployed an ecommerce application using Terraform and Jenkins
+### Congratulations! You have successfully provisioned an eks cluster and deployed an ecommerce application using Terraform and Jenkins.
 
 
 
