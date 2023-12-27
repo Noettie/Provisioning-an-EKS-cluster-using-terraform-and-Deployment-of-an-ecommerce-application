@@ -14,7 +14,7 @@
 1. Create an eks cluster using terraform.
 2. Configure jenkins server
 3. Deploy ecommerce application onto cluster.
-4. 
+   
 
 ### Tools:
 
