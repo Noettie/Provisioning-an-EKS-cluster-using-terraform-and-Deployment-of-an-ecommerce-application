@@ -30,11 +30,11 @@
 ### Steps:
 Part 1: Testing the application locally
 1. Provision the eks cluster by running terraform commands:
-$ terraform fmt
-$ terraform init
-$ terraform validate
-$ terraform plan
-$ terraform apply
+: $ terraform fmt
+: $ terraform init
+: $ terraform validate
+: $ terraform plan
+: $ terraform apply
 _The cluster will take approximately 10-15 minutes to provision.
 3. Update the kube config file with your region and cluster name as in the terraform file. This will enable you to connect to the cluster.
 $ aws eks update-kubeconfig --region <eu-west-2> --name <eks_cluster>
